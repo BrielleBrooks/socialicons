@@ -21,15 +21,23 @@
 
     .wrapper {
       display: inline-flex;
-      padding-top: 20px;   /* drop down from top */
-      padding-left: 20px;  /* push in from left */
+      padding-left: 20px; /* left offset */
     }
 
+    /* Default icon style */
     .icon {
       font-size: 20px;
-      color: #7a7a7a;
+      color: #7a7a7a; /* light mode default */
     }
 
+    /* Dark mode default color */
+    @media (prefers-color-scheme: dark) {
+      .icon {
+        color: #ffffff; /* white in dark mode */
+      }
+    }
+
+    /* Hover colors */
     .blog:hover { color: #ffbd2f; }
     .email:hover { color: #23c8c8; }
     .facebook:hover { color: #4267B2; }
